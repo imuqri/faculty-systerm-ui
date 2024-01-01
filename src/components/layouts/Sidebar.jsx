@@ -1,7 +1,6 @@
 import React from "react";
 import { Menu } from "antd";
 import { Link } from "react-router-dom";
-import { UserOutlined } from "@ant-design/icons";
 import SidebarItems from "./SidebarItems";
 
 const Sidebar = ({ collapsed }) => {
@@ -11,7 +10,7 @@ const Sidebar = ({ collapsed }) => {
       <Menu theme="dark" mode="inline" defaultSelectedKeys={["home"]}>
         {SidebarItems.map((item) => (
           <Menu.Item key={item.key} icon={item.icon}>
-            {item.label}
+            <Link to={item.path}>{item.label}</Link>
           </Menu.Item>
         ))}
       </Menu>
