@@ -5,8 +5,7 @@ import SidebarItems from "./SidebarItems";
 
 const Sidebar = ({ collapsed }) => {
   return (
-    <div style={{ padding: "5px", textAlign: "center" }}>
-      <h1>KPPIM</h1>
+    <div style={{ padding: "2px", textAlign: "center", marginTop: "50px" }}>
       <Menu theme="dark" mode="inline" defaultSelectedKeys={["home"]}>
         {SidebarItems.map((item) => (
           <Menu.Item key={item.key} icon={item.icon}>

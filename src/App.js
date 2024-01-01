@@ -14,6 +14,10 @@ const App = () => {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
 
+  const isMobile = window.innerWidth <= 768;
+  const collapsedWidth = isMobile ? 0 : 60;
+  const sidebarMaxWidth = isMobile ? 75 : 200;
+
   return (
     <Router>
       <Layout style={{ minHeight: "100vh" }}>
@@ -21,7 +25,8 @@ const App = () => {
           trigger={null}
           collapsible
           collapsed={collapsed}
-          collapsedWidth="0"
+          collapsedWidth={collapsedWidth}
+          width={sidebarMaxWidth}
         >
           <Sidebar collapsed={collapsed} />
         </Sider>
@@ -34,6 +39,7 @@ const App = () => {
               minHeight: 280,
               background: colorBgContainer,
               borderRadius: borderRadiusLG,
+              boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
             }}
           >
             <AppRoutes />

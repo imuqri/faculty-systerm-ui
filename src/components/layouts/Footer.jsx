@@ -8,7 +8,7 @@ const Footer = () => {
         textAlign: "center",
       }}
     >
-      KPPIM Faculty Facility Management System ©2023 Created by imuqri
+      KPPIM Faculty Facility Management System V1 ©2023 Created by imuqri
     </Layout.Footer>
   );
 };
