@@ -1,11 +1,7 @@
 import React, { useState } from "react";
-import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
-import { Layout, Menu, Button, theme } from "antd";
-import SidebarItems from "./components/layouts/SidebarItems";
+import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
+import { Layout, Button, theme } from "antd";
+import Sidebar from "./components/layouts/Sidebar";
 
 const { Header, Sider, Content, Footer } = Layout;
 
@@ -23,21 +19,13 @@ const App = () => {
         collapsed={collapsed}
         collapsedWidth="0"
       >
-        <div className="demo-logo-vertical" />
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={["home"]}>
-          {SidebarItems.map((item) => (
-            <Menu.Item key={item.key} icon={item.icon}>
-              {item.label}
-            </Menu.Item>
-          ))}
-        </Menu>
+        <Sidebar collapsed={collapsed} />
       </Sider>
       <Layout>
         <Header
           style={{
             padding: 0,
             background: colorBgContainer,
-            backgroundColor: "red",
           }}
         >
           <Button
