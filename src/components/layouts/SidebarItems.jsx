@@ -1,32 +1,34 @@
 import React from "react";
 import {
   UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
+  DesktopOutlined,
+  HomeOutlined,
+  UserAddOutlined,
+  AppstoreAddOutlined,
 } from "@ant-design/icons";
 
 const sidebarItems = [
   {
     key: "home",
-    icon: <UserOutlined />,
+    icon: <HomeOutlined />,
     label: "Home",
     path: "/home",
   },
   {
     key: "addUser",
-    icon: <UserOutlined />,
+    icon: <UserAddOutlined />,
     label: "Add User",
     path: "/addUser",
   },
   {
     key: "addSoftware",
-    icon: <VideoCameraOutlined />,
+    icon: <AppstoreAddOutlined />,
     label: "Add Software",
     path: "/addSoftware",
   },
   {
     key: "addEquipment",
-    icon: <UploadOutlined />,
+    icon: <DesktopOutlined />,
     label: "Add Equipment",
     path: "/addEquipment",
   },
